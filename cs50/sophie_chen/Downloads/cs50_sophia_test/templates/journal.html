@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Journal
+{% endblock %}
+
+{% block main %}
+<form action="/journal" method="post">
+    <div class="playlist-container">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title your entry!</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Title" type="text">
+        </div>
+        <div class="mb-3">
+            <label for="entrytext" class="form-label">Share your thoughts!</label>
+            <textarea class="form-control" id="entrytext" name="text" rows="5"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Post</button>
+    </div>
+</form>
+
+{% endblock %}
