@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <!--javascript typing fucntion-->
+    <div class="typing" id="typing-text"></div>
+    <script>
+        const text = "Hello, {{ firstname }}! How are you feeling today?";
+        const typingElement = document.getElementById("typing-text");
+
+        let index = 0;
+        const speed = 100;
+
+        function type() {
+            if (index < text.length) {
+                typingElement.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(type, speed);
+            }
+        }
+        window.onload = type;
+    </script>
+
+    <!-- code wrapped in container for aesthetics-->
+    <div class="playlist-container">
+        <div class="h3">
+            <label for="title" class="form-label">Your journal entries</label>
+        </div>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Iterate through each entry in database and display its contents on a card-->
+            {% for entry in entries %}
+            <div class="col">
+                <div class="card" style="background-color: {{ entry.mood_color }};">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ entry.title }}</h5>
+                        <p class="card-text"><small class="text-muted">{{ entry.timestamp }}</small></p> <!-- Display the timestamp -->
+                        <p class="card-text"> {{ entry.text }} </p>  <!-- Display the journal entry text -->
+                        <p class="card-text">{{ entry.top_moods | join(', ') }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+    </div>
+
+{% endblock %}

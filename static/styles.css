@@ -1,0 +1,280 @@
+/* Colors and fonts */
+
+/* Size for brand */
+nav .navbar-brand {
+    font-size: 50px;
+    font-family: "Neucha", sans-serif; /* Add fallback fonts */
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav .navbar-brand:hover {
+    color: #344e41;
+}
+
+/* Stylize navigation bar and tabs */
+.navbar-nav.ms-auto .nav-item {
+    margin-left: 20px;
+}
+
+.navbar-nav.me-auto .nav-item {
+    margin-right: 20px;
+}
+
+nav .navbar {
+    background-color: #cad2c5;
+    padding-left: 20px; /* Add spacing to the left */
+    padding-right: 20px; /* Add spacing to the right */
+}
+
+/* Stylize tab names */
+.nav-link {
+    color: #ffffff;
+    font-family: "Neucha", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: #3a5a40;
+}
+
+body {
+    background-color: #cad2c5; /* sets the background color for the body */
+}
+
+/* Stylize cards */
+/* Utilized Bootstrap templating */
+.cards {
+    display: flex; /* enables flex layout */
+    flex-wrap: wrap; /* allows wrapping of card items */
+    list-style: none; /* removes bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+.cards_item {
+    display: flex; /* ensures cards are displayed in a row */
+    padding: 1rem;
+}
+
+.card {
+    background-color: #cad2c5; /* matches the body background */
+    border-radius: 0.25rem; /* gives the card rounded corners */
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); /* adds a subtle shadow for depth */
+    display: flex;
+    flex-direction: column; /* stacks card content vertically */
+    overflow: hidden; /* hides overflow content */
+}
+
+.card_content {
+    padding: 1rem;
+    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%); /* gradient background effect */
+}
+
+.card_title {
+    color: #cad2c5;
+    font-size: 1.1rem;
+    font-weight: 700; /* bold text */
+    letter-spacing: 1px; /* spaces out letters */
+    text-transform: capitalize; /* capitalizes first letter of each word */
+    margin: 0px;
+}
+
+.content {
+    margin-top: 40px;
+    padding: 10px;
+    min-height: calc(100vh - 200px); /* dynamic height based on viewport */
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.card_text {
+    color: #cad2c5;
+    font-size: 0.875rem; /* smaller text size */
+    line-height: 1.5; /* controls text spacing */
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+}
+
+/* Stylize navigation bar */
+#topnavigation {
+    overflow: hidden;
+    align-items: center;
+    font-size: 14px;
+    justify-content: space-between;
+    background-color: #52796f; /* sets the navigation bar's background color */
+}
+
+#footer {
+    font-family: 'Neucha', sans-serif; /* custom font for the footer */
+    background-color: #52796f; /* matches top navigation */
+    height: 60px;
+    position: fixed; /* ensures footer stays at the bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff; /* white text color */
+}
+
+.typing {
+    font-family: 'Neucha', sans-serif;
+    font-size: 70px; /* large font for typing effect */
+    white-space: nowrap; /* prevents text wrapping */
+    overflow: hidden; /* hides overflowing content */
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-brand-custom {
+    font-family: 'Neucha', sans-serif;
+    color: #ffffff;
+    font-size: 1.75rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.text {
+    overflow: hidden;
+    max-width: 80%; /* constrains text width */
+    text-align: left;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.red-text {
+    color: #8e3f3f;
+}
+
+h1 {
+    font-size: 45px; /* sets heading size */
+    font-family: 'Neucha', sans-serif;
+    text-align: center;
+    color: black;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'Neucha', sans-serif;
+    text-align: center;
+    color: black;
+}
+
+h3 {
+    color: black;
+    font-size: 13px; /* small text for subheadings */
+    text-align: center;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+h4 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.centered-image {
+    display: block;
+    float: left; /* aligns image to the left */
+    margin-right: 0px;
+    margin-left: 30px;
+    border: 2px solid black; /* adds a border around the image */
+    max-width: 40%;
+    height: auto;
+    text-align: left;
+    width: 200px;
+    object-fit: cover; /* ensures the image is properly cropped */
+    object-position: bottom center; /* positions the focal point of the image */
+}
+
+.centered-image2 {
+    display: block;
+    float: center;
+    border: 2px solid black;
+    max-width: 100%; /* image will not exceed container width */
+    height: auto;
+    text-align: center;
+}
+
+p {
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.footer-content {
+    display: inline-block;
+    text-align: center;
+}
+
+#footer a {
+    text-decoration: none; /* removes underline from links */
+    color: #ffffff;
+}
+
+#footer img {
+    vertical-align: middle; /* aligns images vertically within the footer */
+}
+
+.profile-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-image {
+    display: inline-block;
+    border: 2px solid black;
+    width: 200px; /* fixed width for profile images */
+    height: 300px; /* fixed height for profile images */
+    object-fit: cover; /* ensures the image scales properly */
+    margin: 0 20px;
+}
+
+.playlist-container {
+    text-align: center;
+    font-family: "Tahoma", sans-serif;
+    background-color: #cad2c5;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px; /* smooth rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* adds subtle elevation */
+}
+
+.container-wrapper {
+    display: flex;
+    flex-direction: column; /* stacks children vertically */
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* constrains container width */
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.playlist {
+    margin: 20px 0;
+}
+
+.purple h3 { color: purple; }
+.green h3 { color: green; }
+.pink h3 { color: pink; }
+.red h3 { color: red; }
+.yellow h3 { color: yellow; }
+.blue h3 { color: blue; }
+
+iframe {
+    border-radius: 8px; /* rounds iframe corners */
+    margin-top: 10px;
+}

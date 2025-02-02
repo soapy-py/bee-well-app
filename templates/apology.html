@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+<!--display message containing error name and code if one occurs-->
+{% block main %}
+    <h1>Sorry! We've encountered error {{ code }}: "{{ message }}"</h1>
+{% endblock %}

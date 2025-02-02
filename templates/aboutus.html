@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About Us
+{% endblock %}
+
+{% block main %}
+    <!--about us block with javascript-->
+    <div class="content">
+        <div class="typing" id="typing-text"></div>
+        <script>
+            const text = "Hi! Welcome to Bee Well.";
+            const typingElement = document.getElementById("typing-text");
+
+            //index tracking and typing speed
+            let index = 0;
+            const speed = 100;
+
+            //creating a type function. if index less than length, 
+            //current chracter of the defined html string is appended to the current character and the index is incremented by 1
+            function type() {
+                if (index < text.length) {
+                    typingElement.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(type, speed);
+                }
+            }
+            // typing effect is triggered
+            window.onload = type;
+        </script>
+    
+        <!--code is wrapped in a container for better aesthetics-->
+        <div class="playlist-container">
+            <h1>Our Mission</h1> 
+            <div class="text">
+                <p>At Bee Well, we believe in the power of understanding and embracing your emotions. Our mission is to help you track, evaluate, and improve your mental well-being by providing a safe space for journaling. Using sentiment analysis, we capture your mood over time, empowering you to identify patterns and gain insight into your emotional journey.
+                </p>
+                <p>Journaling is a powerful tool for self-reflection. By regularly logging your thoughts and feelings, you can gain a deeper understanding of your emotional state. Recognizing how you feel—whether it's joy, stress, or something in between—is a key step toward mental clarity and healing. Your emotions are valid, and by acknowledging them, you take control of your mental health.
+                </p>
+                <p>Through regular journaling and sentiment analysis, Bee Well provides you with valuable insights into your emotional patterns, helping you identify triggers and make proactive choices to enhance your mental health. With personalized wellness tips, we aim to empower you to improve your well-being, one day at a time.</p>
+                <h3>ready to get started and <strong>bee</strong> well? </h3>
+                <h3 class='red-text'>begin journaling today</em> </h3>
+            </div>
+        </div>
+
+        <!--code is wrapped in a container for aesthetics-->
+        <div class="playlist-container">
+            <h1>How does our app work?</h1> 
+            <div class="text">
+                <p>Our app helps you track and explore your feelings through journaling, using advanced Natural Language Processing (NLP) to analyze your entries. When you log your thoughts, our system identifies the most prominent emotion from 28 possible categories and matches it with a color-coded mood aura. Inspired by Spotify’s Audio Aura concept, these colors give you a simple and intuitive way to visualize your emotional state and identify patterns over time.</p>
+            </div>
+            <h2>What do the colors mean?</h2>   
+            <div class="text">
+                <p>We’ve grouped emotions into six unique aura categories to help you better understand your mood. The 28 possible emotions are grouped into 6 colors: yellow admiration amusement anger annoyance approval caring confusion curiosity desire disappointment disapproval disgust embarrassment excitement fear gratitude grief joy love nervousness optimism pride realization relief remorse sadness surprise neutral. The highlighted colors indicate the emotional aura they correspond to. <span style="color: yellow;">Yellow</span>
+                    signifies admiration, amusement, approval, caring, curiosity, desire, excitement, gratitude, joy, love, optimism, pride, realization, relief, and surprise. <span style="color: red;">Red</span> signifies anger and remorse. <span style="color: green;">Green</span> signifies annoyance, disapproval, disgust, and embarrassment. <span style="color: purple;">Purple</span> signifies confusion, fear, and nervousness. <span style="color: blue;">Blue</span> represents disappointment, sadness, and grief. <span style="color: gray;">Gray</span> represents neutral.</p>
+                <p>With every journal entry, our app helps you track your emotional journey and see your mood evolve over time. These visualizations make it easy to identify patterns, spot triggers, and take actionable steps toward improving your mental health. At Bee Well, we’re here to empower you to embrace your emotions, gain insight into your mental well-being, and take control of your emotional journey.
+                </p>
+            </div>
+        </div>
+
+        <!-- code is wrapped in a container so images are all the same size-->
+        <div class="playlist-container">
+            <h1>Meet the Team</h1> 
+            <div class="profile-container">
+                <img src="/static/jasmine.png" alt="profile-photo" class="profile-image"/>
+                <img src="/static/sophia.png" alt="profile-photo" class="profile-image"/>
+                <img src="/static/sophie.png" alt="profile-photo" class="profile-image"/>
+            </div>
+            <div class="text">
+                <p>Hi! We’re Jasmine, Sophia, and Sophie—a passionate team of Harvard undergraduates diving deep into the world of computer science. We’re dedicated to leveraging technology to make a positive impact, with a special focus on improving mental health advocacy.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+

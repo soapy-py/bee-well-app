@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Journal
+{% endblock %}
+
+{% block main %}
+<!-- posting a journal entry with title-->
+<form action="/journal" method="post">
+    <!-- container to make things more aesthetic-->
+     <!--Used and modified Bootstrap templating-->
+    <div class="playlist-container">
+        <div class="mb-3">
+            <!--Forms for inputting title and journal entry-->
+            <label for="title" class="form-label">Title your entry!</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Title" type="text">
+        </div>
+        <div class="mb-3">
+            <label for="entrytext" class="form-label">Share your thoughts!</label>
+            <textarea class="form-control" id="entrytext" name="text" rows="5"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Post</button>
+    </div>
+</form>
+
+{% endblock %}
